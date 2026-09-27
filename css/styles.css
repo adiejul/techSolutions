@@ -1,0 +1,11 @@
+.cuerpo  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+}
+
+.cuerpo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
