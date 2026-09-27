@@ -9,3 +9,224 @@
     height: auto;
     display: block;
 }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #1b2430;
+}
+
+/* Menú / cabecera (se aplica a las dos páginas) */
+header {
+  background: linear-gradient(135deg, #0b3a52, #072534);
+  color: #eef6fb;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo img {
+  height: 65px;
+}
+.logo h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #99f6e4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  position: relative;
+  color: #a7f3d0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #99f6e4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #99f6e4;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* --- Contenedor exterior --- */
+main,
+.cuerpo {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* ===== sobre-nosotros.html ===== */
+.hero-sobre-nosotros {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #b4c6d8;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.hero-sobre-nosotros h2 {
+  color: #0b3a52;
+  margin-bottom: 0.3rem;
+}
+
+.historia, .valores, .equipo {
+  margin-bottom: 2rem;
+}
+.historia h3, .valores h3, .equipo h3 {
+  color: #0b3a52;
+  border-bottom: 2px solid #99f6e4;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.mision-vision .mision,
+.mision-vision .vision {
+  flex: 1;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.mision-vision h3 {
+  color: #0b3a52;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+.valores li {
+  background: #ffffff;
+  border-left: 4px solid #99f6e4;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+footer {
+  background: #0b3a52;
+  color: #eef6fb;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.mision-vision .mision,
+.mision-vision .vision {
+  flex: 1;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.mision-vision .mision,
+.mision-vision .vision {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mision-vision .mision:hover,
+.mision-vision .vision:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(11, 58, 82, 0.15);
+}
+
+.valores li {
+  transition: transform 0.2s ease;
+}
+.valores li:hover {
+  transform: translateX(6px);
+}
+
+/* ===== contacto.html ===== */
+#pagina-contacto .cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cuerpo h1 {
+  color: #0b3a52;
+}
+.cuerpo h2 {
+  color: #1b2430;
+}
+
+#formulario-contacto {
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+}
+#formulario-contacto label {
+  font-weight: 600;
+}
+#formulario-contacto input,
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #b4c6d8;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#formulario-contacto textarea {
+  min-height: 120px;
+}
+#enviar {
+  background: #99f6e4;
+  color: #0b3a52;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+#enviar:hover {
+  background: #a7f3d0;
+}
