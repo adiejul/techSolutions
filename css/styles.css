@@ -1,10 +1,11 @@
-.cuerpo  {
+/* ===== Index.html ===== */
+.cuerpo-principal  {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 20px; 
 }
 
-.cuerpo img {
+.cuerpo-principal img {
     width: 100%;
     height: auto;
     display: block;
@@ -229,4 +230,154 @@ footer {
 }
 #enviar:hover {
   background: #a7f3d0;
+}
+
+/* ===== carrito.html ===== */
+
+.hero-carrito h2 {
+  color: #002b49;
+  font-family: sans-serif;   
+  display: inline-block;  
+  border-bottom: 3px solid #40e0d0; 
+  padding-bottom: 8px;
+}
+
+/* --- Recuadro principal --- */
+.contenedor-principal-carrito {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;    
+    border-radius: 12px;          
+    padding: 35px;                
+    max-width: 900px;            
+    margin: 40px auto;            
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/*ESTILOS DE LA TABLA*/
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;    /* Elimina bordes dobles */
+    margin-bottom: 35px;
+}
+
+/* Encabezados (Producto, Precio, Cantidad...) */
+.tabla-carrito th {
+    color: #002b49;               
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #40e0d0; 
+}
+
+/* Celdas de los productos */
+.tabla-carrito td {
+    color: #334155;             
+    padding: 20px 0;
+    font-size: 15px;
+    vertical-align: middle;      
+    border-bottom: 1px solid #f1f5f9;  
+}
+
+/* Centrar las columnas de cantidad y subtotal para que se vea más ordenado */
+.tabla-carrito th:nth-child(3), .tabla-carrito td:nth-child(3),
+.tabla-carrito th:nth-child(4), .tabla-carrito td:nth-child(4) {
+    text-align: center;
+}
+
+/* --- CONTADOR DE CANTIDAD (- 1 +) --- */
+.btn-restar, .btn-sumar {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #002b49;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn-restar:hover, .btn-sumar:hover {
+    background-color: #e2e8f0;
+}
+.cantidad {
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+/* Botón Eliminar de la fila */
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #ef4444;               
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-eliminar:hover {
+    text-decoration: underline;
+}
+
+/* --- RESUMEN DEL PEDIDO--- */
+.resumen-compra h3 {
+    color: #002b49;              
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    color: #475569;               
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+/* Fila del precio Total */
+.resumen-linea.total {
+    color: #002b49;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* --- BOTONES DE ACCIÓN PRINCIPALES --- */
+.btn-vaciar-carrito, .btn-finalizar-compra {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+
+.btn-vaciar-carrito {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+}
+.btn-vaciar-carrito:hover {
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+/* Botón Finalizar Compra (Estilo principal TecnoMundo) */
+.btn-finalizar-compra {
+    background-color: #002b49;   
+    border: 1px solid #002b49;
+    color: #ffffff;               
+}
+.btn-finalizar-compra:hover {
+    background-color: #001f35;    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 13px;
 }
