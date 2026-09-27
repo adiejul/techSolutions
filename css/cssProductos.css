@@ -1,0 +1,152 @@
+/* ===== Menú de navegación (nav-inicio) ===== */
+
+.nav-inicio header {
+  background: linear-gradient(135deg, #0b3a52, #072534);
+  color: #eef6fb;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.nav-inicio nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-inicio nav a {
+  position: relative;
+  color: #a7f3d0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-inicio nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #99f6e4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-inicio nav a:hover {
+  color: #99f6e4;
+}
+
+.nav-inicio nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ===== Página de producto ===== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f1f5f9;
+  color: #1b2430;
+}
+
+.cuerpo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.producto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.descripcion h3 {
+  color: #0b3a52;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #99f6e4;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-top: 0;
+}
+
+.descripcion ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.2rem;
+}
+
+.descripcion li {
+  background: #ffffff;
+  border-left: 4px solid #99f6e4;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  color: #334155;
+}
+
+/* Bloque de precio y botón (ocupa las dos columnas) */
+.cuerpo > div:last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cuerpo > div:last-child label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b3a52;
+}
+
+#carrito {
+  background: #99f6e4;
+  color: #0b3a52;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#carrito:hover {
+  background: #a7f3d0;
+}
+
+/* Responsive: apila imagen y descripción en móvil */
+@media (max-width: 700px) {
+  .cuerpo {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
