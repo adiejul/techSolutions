@@ -15,3 +15,17 @@ document.getElementById("sobre-nosotros").addEventListener("click", () => {
 document.getElementById("carrito").addEventListener("click", () => {
     window.location.href = "../index.html";
 });
+
+/* FUNCIONAMIENTO DEL BOTÓN DE ELIMINAR */
+
+/*
+const listaCarrito = document.getElementById("lista-carrito");
+
+if (listaCarrito) {
+    listaCarrito.addEventListener("click", (evento) => {
+        if (evento.target.classList.contains("btn-eliminar")) {
+            evento.target.closest("tr").remove();
+        }
+    });
+}
+*/
