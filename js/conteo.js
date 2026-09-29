@@ -19,16 +19,6 @@ function obtenerCantidad() {
         }
     });
 
-    // 3. Convertimos las filas a un Array para poder recorrerlas con forEach
-    Array.from(filas).forEach(fila => {
-        // Buscamos los span con la clase "cantidad" en esa fila
-        const spans = fila.getElementsByClassName("cantidad");
-        
-        if (spans.length > 0) {
-            total += Number(spans[0].textContent);
-        }
-    });
-
     return total;
 }
 
