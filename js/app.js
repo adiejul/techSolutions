@@ -172,7 +172,7 @@ document.getElementById("sobre-nosotros").addEventListener("click", () => {
 
 // Botón que te lleva al sitio equivocado, debería de llevar al carrito.
 document.getElementById("carrito").addEventListener("click", () => {
-    window.location.href = "../index.html";
+    window.location.href = "../carrito.html";
 });
 
 /* FUNCIONAMIENTO DEL BOTÓN DE ELIMINAR (Marcos) */
