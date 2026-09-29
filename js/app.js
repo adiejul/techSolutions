@@ -116,15 +116,16 @@ function pintarCarrito(){
     const subTotal1 = document.getElementById("subtotal-total");
     const envioTotal1 = document.getElementById("envio-total");
     const precioTotal1 = document.getElementById("precio-total");
-    const gastosEnvio = "25.00";
+    const gastosEnvio = 25.00; //elimino las comillas de texto del gasto de envio
 
     if (subTotal1) {
         subTotal1.textContent=`${subTotalAcumulado.toFixed(2)}€`
     } 
 
     if (precioTotal1) {
-        // FALLO INTENCIONADO: Concatena el subtotal (string) con el envío en lugar de sumar
-        precioTotal1.textContent = `${subTotalAcumulado.toFixed(2) + gastosEnvio}€`;
+        //Ahora si realizo correctamente la suma total del carrito
+        const totalFinal = subTotalAcumulado + gastosEnvio;
+        precioTotal1.textContent = `${totalFinal.toFixed(2)}€`; 
     }
 
     if (envioTotal1) {
