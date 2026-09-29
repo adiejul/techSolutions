@@ -20,7 +20,7 @@ function cargarProductos() {
                 <img src="imagenes/macbook.png" alt="MacBook" style="cursor: pointer; width: 100px; height: auto;" onclick="agregarAlCarrito('MacBook')">
                 <img src="imagenes/monitor-acer.png" alt="Monitor" style="cursor: pointer; width: 100px; height: auto;" onclick="agregarAlCarrito('Monitor Acer')">
                 <img src="imagenes/airfryer.png" alt="Airfryer" style="cursor: pointer; width: 100px; height: auto;" onclick="agregarAlCarrito('Airfryer')">
-                <img src="imagenes/siya.png" alt="Silla" style="cursor: pointer; width: 100px; height: auto;" onclick="agregarAlCarrito('Silla')">
+                <img src="imagenes/silla.png" alt="Silla" style="cursor: pointer; width: 100px; height: auto;" onclick="agregarAlCarrito('Silla')">
             </div> 
         `;
     }
