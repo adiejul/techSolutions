@@ -88,7 +88,7 @@ nav a:hover::after {
 /* --- Contenedor exterior --- */
 main,
 .cuerpo {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
