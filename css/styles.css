@@ -1,0 +1,388 @@
+/* ===== Index.html ===== */
+.cuerpo-principal  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-rows: repeat(2, auto);   /* 2 filas */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.cuerpo-principal img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #F2F0EF;
+  color: #1b2430;
+}
+
+/* Menú / cabecera (se aplica a las dos páginas) */
+header {
+  background: linear-gradient(135deg, #0b3a52, #072534);
+  color: #eef6fb;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo img {
+  height: 65px;
+}
+.logo h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #99f6e4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  position: relative;
+  color: #a7f3d0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #99f6e4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #99f6e4;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* --- Contenedor exterior --- */
+main,
+.cuerpo {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* ===== sobre-nosotros.html ===== */
+.hero-sobre-nosotros {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #b4c6d8;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.hero-sobre-nosotros h2 {
+  color: #0b3a52;
+  margin-bottom: 0.3rem;
+}
+
+.historia, .valores, .equipo {
+  margin-bottom: 2rem;
+}
+.historia h3, .valores h3, .equipo h3 {
+  color: #0b3a52;
+  border-bottom: 2px solid #99f6e4;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+}
+
+.mision-vision {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.mision-vision .mision,
+.mision-vision .vision {
+  flex: 1;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.mision-vision h3 {
+  color: #0b3a52;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+.valores li {
+  background: #ffffff;
+  border-left: 4px solid #99f6e4;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+footer {
+  background: #0b3a52;
+  color: #eef6fb;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.mision-vision .mision,
+.mision-vision .vision {
+  flex: 1;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.mision-vision .mision,
+.mision-vision .vision {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.mision-vision .mision:hover,
+.mision-vision .vision:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(11, 58, 82, 0.15);
+}
+
+.valores li {
+  transition: transform 0.2s ease;
+}
+.valores li:hover {
+  transform: translateX(6px);
+}
+
+/* ===== contacto.html ===== */
+#pagina-contacto .cuerpo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.cuerpo h1 {
+  color: #0b3a52;
+}
+.cuerpo h2 {
+  color: #1b2430;
+}
+
+#formulario-contacto {
+  background: #ffffff;
+  border: 1px solid #c0c4bc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+}
+#formulario-contacto label {
+  font-weight: 600;
+}
+#formulario-contacto input,
+#formulario-contacto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #b4c6d8;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#formulario-contacto textarea {
+  min-height: 120px;
+}
+#enviar {
+  background: #99f6e4;
+  color: #0b3a52;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+#enviar:hover {
+  background: #a7f3d0;
+}
+
+/* ===== carrito.html ===== */
+
+.hero-carrito h2 {
+  color: #002b49;
+  font-family: sans-serif;   
+  display: inline-block;  
+  border-bottom: 3px solid #40e0d0; 
+  padding-bottom: 8px;
+}
+
+/* --- Recuadro principal --- */
+.contenedor-principal-carrito {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;    
+    border-radius: 12px;          
+    padding: 35px;                
+    max-width: 900px;            
+    margin: 40px auto;            
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/*ESTILOS DE LA TABLA*/
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;    /* Elimina bordes dobles */
+    margin-bottom: 35px;
+}
+
+/* Encabezados (Producto, Precio, Cantidad...) */
+.tabla-carrito th {
+    color: #002b49;               
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #40e0d0; 
+}
+
+/* Celdas de los productos */
+.tabla-carrito td {
+    color: #334155;             
+    padding: 20px 0;
+    font-size: 15px;
+    vertical-align: middle;      
+    border-bottom: 1px solid #f1f5f9;  
+}
+
+/* Centrar las columnas de cantidad y subtotal para que se vea más ordenado */
+.tabla-carrito th:nth-child(3), .tabla-carrito td:nth-child(3),
+.tabla-carrito th:nth-child(4), .tabla-carrito td:nth-child(4) {
+    text-align: center;
+}
+
+/* --- CONTADOR DE CANTIDAD (- 1 +) --- */
+.btn-restar, .btn-sumar {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #002b49;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn-restar:hover, .btn-sumar:hover {
+    background-color: #e2e8f0;
+}
+.cantidad {
+    margin: 0 8px;
+    font-weight: 600;
+}
+
+/* Botón Eliminar de la fila */
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #ef4444;               
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-eliminar:hover {
+    text-decoration: underline;
+}
+
+/* --- RESUMEN DEL PEDIDO--- */
+.resumen-compra h3 {
+    color: #002b49;              
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    color: #475569;               
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+/* Fila del precio Total */
+.resumen-linea.total {
+    color: #002b49;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+
+/* --- BOTONES DE ACCIÓN PRINCIPALES --- */
+.btn-vaciar-carrito, .btn-finalizar-compra {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+
+.btn-vaciar-carrito {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #64748b;
+}
+.btn-vaciar-carrito:hover {
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+/* Botón Finalizar Compra (Estilo principal TecnoMundo) */
+.btn-finalizar-compra {
+    background-color: #002b49;   
+    border: 1px solid #002b49;
+    color: #ffffff;               
+}
+.btn-finalizar-compra:hover {
+    background-color: #001f35;    
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 13px;
+}
